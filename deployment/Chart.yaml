@@ -1,0 +1,3 @@
+apiVersion: v2
+name: joinzoe-deployment
+version: 1.0.0

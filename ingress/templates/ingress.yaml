@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: joinzoe-ingress
+  labels:
+    kcert.dev/ingress: "managed"
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "false"
+spec:
+  ingressClassName: "nginx"
+  tls:
+  - hosts:
+    - joinzoe.demo.agileguru.org
+    secretName: joinzoe-demo
+  rules:
+  - host: joinzoe.demo.agileguru.org
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service: 
+            name: demo-service
+            port: 
+                number: 80

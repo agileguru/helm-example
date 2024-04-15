@@ -1,0 +1,9 @@
+dependencies:
+- name: joinzoe-deployment
+  repository: oci://us-central1-docker.pkg.dev/guru-playground/devops-docker
+  version: 1.0.0
+- name: joinzoe-service
+  repository: oci://us-central1-docker.pkg.dev/guru-playground/devops-docker
+  version: 1.0.0
+digest: sha256:e871c52b4dc95d4c09b5e146bbeaa0020a01b881a39ec06769024d5ddcb59f99
+generated: "2024-04-15T06:34:26.360475+01:00"

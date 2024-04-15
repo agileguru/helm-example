@@ -1,0 +1,12 @@
+apiVersion: v2
+name: joinzoe-ingress
+version: 1.0.0
+dependencies:
+  - name: joinzoe-deployment
+    alias: deployment
+    repository: oci://us-central1-docker.pkg.dev/guru-playground/devops-docker
+    version: 1.0.0
+  - name: joinzoe-service
+    alias: service
+    repository: oci://us-central1-docker.pkg.dev/guru-playground/devops-docker
+    version: 1.0.0  
